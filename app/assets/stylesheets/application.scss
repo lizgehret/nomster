@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+.pagination {
+  
+  cursor: default;
+  height: 22px;
+  a, span, em {
+    padding: 0.0em 0.5em;
+    display: block;
+    float: right;
+    margin-right: 1px;
+  }
+  .disabled {
+    display: none;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: black;
+    color: white;
+    border: 1px solid black;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    &:hover, &:focus {
+      color: black;
+      border-color: black;
+    }
+  }
+  .page_info {
+    background: black;
+    color: white;
+    padding: 0.6em 0.6em;
+    width: 22em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    b {
+      color: black;
+      background: #2e6ab1 + 60;
+      padding: 0.25em 0.25em;
+    }
+  }
+}
