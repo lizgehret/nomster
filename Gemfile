@@ -85,8 +85,8 @@ gem 'font-awesome-rails'
 gem 'devise'
 
 # Adding geocoding gem to enable Google Maps API
-gem "geocoder"
+gem 'geocoder'
 
 # Adding gem to store values in an ENV variable on localhost
-gem "figaro"
+gem 'figaro'
 
