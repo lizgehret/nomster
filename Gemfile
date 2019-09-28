@@ -95,3 +95,4 @@ gem 'carrierwave', '> 1.0'
 
 # Adding gem to utilize S3 keys associated with AWS
 gem 'fog-aws'
+
