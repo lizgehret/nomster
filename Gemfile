@@ -90,3 +90,6 @@ gem 'geocoder'
 # Adding gem to store values in an ENV variable on localhost
 gem 'figaro'
 
+# Adding file upload library
+gem 'carrierwave', '> 1.0'
+
