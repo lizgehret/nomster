@@ -44,7 +44,7 @@
 <div class="clear"></div>
 
 <!-- Comment Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModalComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -80,7 +80,7 @@
 
 <div class="row">
   <% @place.comments.each do |comment| %>
-    <div class="col-12 col-sm-6">
+    <div class="col-4 flex-column mx-auto">
       <blockquote>
         <% if comment.humanized_rating.present? %>
           <b><%= comment.humanized_rating %></b> - 
@@ -109,7 +109,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+          <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
@@ -127,12 +127,14 @@
 </div>
 
 <div class="clear"></div>
+<br />
+<br />
 
 <div class="row">
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
-        <div class="d-inline-flex flex-column mx-auto text-center">
-          <% image_tag(photo.picture.url, class: 'p-2 rounded img-fluid photo-images photo-images-show') if photo.picture? %>
+        <div class="col-8 offset-md-3 flex-column mx-auto text-left">
+          <%= image_tag(photo.picture.url, class: 'p-2 rounded img-fluid photo-images photo-images-show') %>
         <blockquote>
           <% if photo.caption.present? %>
             <b><%= photo.caption %></b> -
